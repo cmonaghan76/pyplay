@@ -10,6 +10,7 @@ __pycache__/
 .exercism
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
