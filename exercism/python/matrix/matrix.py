@@ -1,9 +1,11 @@
+import re
+
 class Matrix(object):
     def __init__(self, matrix_string):
-        pass
+        self.matrix = [[int(i) for i in re.split(" +", row)] for row in re.split("\n+", matrix_string)]
 
     def row(self, index):
-        pass
+        return self.matrix[index-1]
 
     def column(self, index):
-        pass
+        return [row[index-1] for row in self.matrix]
