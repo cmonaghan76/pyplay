@@ -1,11 +1,8 @@
-# alternate solution without using re
+import re
 
 class Matrix(object):
     def __init__(self, matrix_string):
-        self.matrix = list()
-        rows = matrix_string.split("\n")
-        for row in rows:
-            self.matrix.append([int(n) for n in row.split(" ")])
+        self.matrix = [[int(i) for i in re.split(" +", row)] for row in re.split("\n+", matrix_string)]
 
     def row(self, index):
         return self.matrix[index-1]
