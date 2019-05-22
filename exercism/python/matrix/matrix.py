@@ -1,5 +1,3 @@
-# alternate solution without using re
-
 class Matrix(object):
     def __init__(self, matrix_string):
         self.matrix = [[int(n) for n in row.split(" ")] for row in matrix_string.split("\n")]
