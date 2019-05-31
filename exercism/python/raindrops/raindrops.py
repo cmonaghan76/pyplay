@@ -1,11 +1,4 @@
 def raindrops(number):
-    sounds = ""
-    if number % 3 == 0:
-        sounds = sounds + "Pling"
-    if number % 5 == 0:
-        sounds = sounds + "Plang"
-    if number % 7 == 0:
-        sounds = sounds + "Plong"
-    if sounds == "":
-        sounds = str(number)
-    return sounds
+    sounds = {3: "Pling", 5: "Plang", 7: "Plong"}
+    raindrops = ''.join([sounds[factor] for factor in sounds.keys() if number % factor == 0])
+    return raindrops or str(number)
